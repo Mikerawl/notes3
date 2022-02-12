@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/public/assets', express.static('./public/assets'));
 // Creates routes
 require('./routes/notes')(app);
-// require('./routes/api')(app);
+require('./routes/api')(app);
 
 // Start the server on the port
   app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`));
